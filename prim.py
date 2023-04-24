@@ -1,6 +1,6 @@
 class Graph:
-    def __init__(self, vertices):
-        self.V = vertices
+    def __init__(self, vertex):
+        self.V = vertex
         self.graph = [[0] * self.V for _ in range(self.V)]
  
     def add_edge(self, u, v, w):
@@ -10,8 +10,7 @@ class Graph:
     def prim(self):
        
         visited = [False] * self.V
- 
-       
+
         key = [float('inf')] * self.V
        
         key[0] = 0
